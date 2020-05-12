@@ -11,7 +11,7 @@ public class test {
 	@Test
 	public void Test() throws IOException {
 
-		EnviarMail myEmail = new EnviarMail();
+		EnviarMail myEmail = new EnviarMail(new AdapterJavaMail(),new Email());
 		myEmail.ejecutar();
 
 	}

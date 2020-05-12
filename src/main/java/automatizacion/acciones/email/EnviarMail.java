@@ -22,6 +22,8 @@ import java.util.Properties;
  * @created 10-May-2020 2:54:30 PM
  */
 public class EnviarMail extends Accion {
+	AdapterEmailSender adapterEmailSenderdapterEmai;
+	Email email;
 
 	//public AdapterEmailSender m_AdapterEmailSender;
 
@@ -29,19 +31,17 @@ public class EnviarMail extends Accion {
 	//https://www.journaldev.com/2532/javamail-example-send-mail-in-java-smtp
 
 
-
+	public EnviarMail(AdapterEmailSender adapterEmailSenderdapterEmai, Email email){
+		this.adapterEmailSenderdapterEmai = adapterEmailSenderdapterEmai;
+		this.email = email;
+	}
 
 
 	@Override
 	public void ejecutar() {
-	}
-
-
-
-	public void ejecutar(AdapterEmailSender adapterEmailSenderdapterEmai){
 		adapterEmailSenderdapterEmai.enviar(email);
 	}
 
-	public void ejecutar(Email email){
-	}
+
+
 }//end EnviarMail
