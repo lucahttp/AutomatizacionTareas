@@ -2,6 +2,7 @@ package automatizacion.acciones.email;
 
 import automatizacion.acciones.Accion;
 import automatizacion.acciones.email.ejemplos.TestEmailFromGmail;
+import automatizacion.acciones.email.emailContent.Email;
 
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
@@ -28,13 +29,19 @@ public class EnviarMail extends Accion {
 	//https://www.journaldev.com/2532/javamail-example-send-mail-in-java-smtp
 
 
+
+
+
 	@Override
-	public void ejecutar(){
-
-
+	public void ejecutar() {
 	}
 
-	private void adsadas(){
 
+
+	public void ejecutar(AdapterEmailSender adapterEmailSenderdapterEmai){
+		adapterEmailSenderdapterEmai.enviar(email);
+	}
+
+	public void ejecutar(Email email){
 	}
 }//end EnviarMail
